@@ -1,0 +1,25 @@
+h1 {
+    color: red;
+}
+
+h2 {
+    color: blue;
+}
+
+h3 {
+    color: yellow;
+    font-size: 48px;
+}
+
+h4 {
+    color: cyan;
+}
+
+h5 {
+    color: darkmagenta;
+}
+
+h6 {
+    color: firebrick;
+    font-size: 64px;
+}
