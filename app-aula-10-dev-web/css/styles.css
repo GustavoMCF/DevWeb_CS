@@ -1,0 +1,92 @@
+body, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.rem;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a{
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.menu li a:hover{
+    color: #f0a500;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.hamburguer {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    display: block;
+    position: relative; 
+}
+
+.hamburguer::before,
+.hamburguer::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    transition: transform 0.3s, top 0.3s;
+}
+.hamburguer::before{
+    top: -8px;
+}
+
+.hamburguer::after{
+    top: 8px;
+}
+
+@media (max-width: 768px) {
+    .menu{
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 50px;
+        height: 3px;
+        width: 200px;
+        padding: 10px 0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
