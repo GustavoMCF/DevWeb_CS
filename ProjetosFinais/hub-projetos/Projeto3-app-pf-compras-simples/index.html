@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrinho de Compras Simples</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Carrinho de Compras</h1>
+
+  <section id="produtos">
+    <h2>Produtos</h2>
+    <div class="lista-produtos">
+      <!-- Produtos fixos -->
+      <div class="produto" data-id="1" data-nome="Camiseta" data-preco="49.9">
+        <strong>Camiseta</strong>
+        <p>R$ 49,90</p>
+        <button onclick="adicionarAoCarrinho(1)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="produto" data-id="2" data-nome="Calça" data-preco="89.9">
+        <strong>Calça</strong>
+        <p>R$ 89,90</p>
+        <button onclick="adicionarAoCarrinho(2)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="produto" data-id="3" data-nome="Tênis" data-preco="199.9">
+        <strong>Tênis</strong>
+        <p>R$ 199,90</p>
+        <button onclick="adicionarAoCarrinho(3)">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="carrinho">
+    <h2>Carrinho</h2>
+    <ul id="lista-carrinho"></ul>
+    <p><strong>Total de Itens:</strong> <span id="total-itens">0</span></p>
+    <p><strong>Valor Total:</strong> <span id="total-valor">R$ 0,00</span></p>
+    <button onclick="finalizarCompra()">Finalizar Compra</button>
+  </section>
+
+  <section id="historico">
+    <h2>Compras Realizadas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Itens</th>
+          <th>Total</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-historico">
+        <!-- Histórico será preenchido dinamicamente -->
+      </tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

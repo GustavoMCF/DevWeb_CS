@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogo de Adivinhação</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Jogo de Adivinhação</h1>
+
+  <section id="jogo">
+    <p>Tente adivinhar o número entre <strong>1 e 100</strong>.</p>
+    <input type="number" id="chute" placeholder="Digite seu chute" min="1" max="100" />
+    <button onclick="tentarChute()">Tentar</button>
+    <p id="mensagem"></p>
+    <p><strong>Tentativas restantes:</strong> <span id="tentativas-restantes">10</span></p>
+  </section>
+
+  <section id="historico">
+    <h2>Histórico de Tentativas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Chute</th>
+          <th>Resultado</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-historico">
+        <!-- Tentativas aparecem aqui -->
+      </tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

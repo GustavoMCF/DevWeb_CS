@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agenda Semanal de Tarefas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Agenda Semanal de Tarefas</h1>
+
+  <div id="semana" class="semana">
+    <!-- Dias da semana -->
+    <div class="dia" data-dia="segunda">Segunda-feira
+      <input type="text" placeholder="Nova tarefa..." />
+      <button onclick="adicionarTarefa('segunda')">Adicionar</button>
+      <ul id="lista-segunda"></ul>
+    </div>
+
+    <div class="dia" data-dia="terca">Terça-feira
+      <input type="text" placeholder="Nova tarefa..." />
+      <button onclick="adicionarTarefa('terca')">Adicionar</button>
+      <ul id="lista-terca"></ul>
+    </div>
+
+    <div class="dia" data-dia="quarta">Quarta-feira
+      <input type="text" placeholder="Nova tarefa..." />
+      <button onclick="adicionarTarefa('quarta')">Adicionar</button>
+      <ul id="lista-quarta"></ul>
+    </div>
+
+    <div class="dia" data-dia="quinta">Quinta-feira
+      <input type="text" placeholder="Nova tarefa..." />
+      <button onclick="adicionarTarefa('quinta')">Adicionar</button>
+      <ul id="lista-quinta"></ul>
+    </div>
+
+    <div class="dia" data-dia="sexta">Sexta-feira
+      <input type="text" placeholder="Nova tarefa..." />
+      <button onclick="adicionarTarefa('sexta')">Adicionar</button>
+      <ul id="lista-sexta"></ul>
+    </div>
+
+    <div class="dia" data-dia="sabado">Sábado
+      <input type="text" placeholder="Nova tarefa..." />
+      <button onclick="adicionarTarefa('sabado')">Adicionar</button>
+      <ul id="lista-sabado"></ul>
+    </div>
+
+    <div class="dia" data-dia="domingo">Domingo
+      <input type="text" placeholder="Nova tarefa..." />
+      <button onclick="adicionarTarefa('domingo')">Adicionar</button>
+      <ul id="lista-domingo"></ul>
+    </div>
+  </div>
+
+  <h2>Resumo Geral das Tarefas</h2>
+  <table id="tabela-tarefas">
+    <thead>
+      <tr>
+        <th>Dia</th>
+        <th>Tarefa</th>
+        <th>Status</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Tarefas listadas aqui -->
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relógio com Alarme</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Relógio com Alarme</h1>
+
+  <section id="relogio-container">
+    <div id="relogio">00:00:00</div>
+  </section>
+
+  <section id="alarme-formulario">
+    <label for="alarme">Definir alarme (hh:mm):</label>
+    <input type="text" id="alarme" placeholder="00:00" maxlength="5" />
+    <button onclick="definirAlarme()">Ativar Alarme</button>
+  </section>
+
+  <section id="historico">
+    <h2>Histórico de Alarmes Disparados</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Horário</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-historico">
+        <!-- Entradas dinâmicas -->
+      </tbody>
+    </table>
+  </section>
+
+  <audio id="som-alarme" src="alarme.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

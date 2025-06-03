@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projetos Desenvolvimento Web - GustavoMCF</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Projetos Desenvolvimento Web</h1>
+    <p class="autor">por GustavoMCF</p>
+    <button id="toggle-tema" title="Alternar tema">🌓</button>
+    <button id="toggle-visualizacao" title="Alternar visualização">🧱</button>
+  </header>
+
+  <main>
+    <section id="busca">
+      <input type="text" id="filtro-projetos" placeholder="🔍 Buscar projeto..." />
+    </section>
+
+    <section id="filtros-categorias">
+      <button class="filtro-categoria ativo" data-categoria="todos">Todos</button>
+      <button class="filtro-categoria" data-categoria="Formulários">📄 Formulários</button>
+      <button class="filtro-categoria" data-categoria="Organização">📅 Organização</button>
+      <button class="filtro-categoria" data-categoria="Utilitários">🧰 Utilitários</button>
+      <button class="filtro-categoria" data-categoria="Jogos">🎮 Jogos</button>
+      <button class="filtro-categoria" data-categoria="Segurança">🔐 Segurança</button>
+    </section>
+
+
+    <section class="projetos">
+      <a href="#" data-url="./Projeto1-app-pf-cadastro-clientes/">
+        📄 Cadastro de Clientes <span class="tag">📄 Formulários</span>
+      </a>
+      <a href="#" data-url="./Projeto2-app-pf-agenda-tarefas/">
+        📆 Agenda de Tarefas <span class="tag">📅 Organização</span>
+      </a>
+      <a href="#" data-url="./Projeto3-app-pf-compras-simples/">
+        🛒 Carrinho de Compras <span class="tag">📄 Formulários</span>
+      </a>
+      <a href="#" data-url="./Projeto4-app-pf-jogo-adivinha/">
+        🎯 Jogo de Adivinhação <span class="tag">🎮 Jogos</span>
+      </a>
+      <a href="#" data-url="./Projeto5-app-pf-calculadora-idade/">
+        🎂 Calculadora de Idade <span class="tag">🧰 Utilitários</span>
+      </a>
+      <a href="#" data-url="./Projeto6-app-pf-checklist-viagem/">
+        🧳 Checklist de Viagem <span class="tag">📅 Organização</span>
+      </a>
+      <a href="#" data-url="./Projeto7-app-pf-gerador-senhas/">
+        🔐 Gerador de Senhas <span class="tag">🔐 Segurança</span>
+      </a>
+      <a href="#" data-url="./Projeto8-app-pf-relogio-alarme/">
+        ⏰ Relógio com Alarme <span class="tag">🧰 Utilitários</span>
+      </a>
+    </section>
+
+    <!-- PREVIEW FUNCIONAL -->
+    <div id="preview-container" style="display: none;">
+      <div id="preview-header">
+        <div>
+          <button id="fechar-preview" title="Fechar">✖</button>
+          <button id="abrir-nova-aba" title="Abrir em nova aba">🔗</button>
+        </div>
+        <span id="preview-titulo">Visualizando...</span>
+      </div>
+      <iframe id="preview-frame" src=""></iframe>
+    </div>
+  </main>
+
+  <footer>
+    <p id="footer-text">© <span id="ano-atual"></span> GustavoMCF. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

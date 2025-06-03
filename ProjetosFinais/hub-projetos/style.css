@@ -1,0 +1,251 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9fafb;
+  color: #111827;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #2563eb;
+  color: white;
+  padding: 40px 20px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+
+.autor {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.projetos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.projetos a {
+  text-decoration: none;
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #1e3a8a;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.projetos a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #eff6ff;
+}
+
+.projetos a.clicado {
+  transform: scale(0.97);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.3);
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+  color: #6b7280;
+}
+
+/* Botão de tema */
+#toggle-tema {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Tema escuro */
+body.dark {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+
+body.dark header {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+
+body.dark .projetos a {
+  background-color: #1f2937;
+  color: #93c5fd;
+}
+
+body.dark .projetos a:hover {
+  background-color: #374151;
+}
+
+body.dark footer {
+  color: #9ca3af;
+}
+
+#busca {
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+#filtro-projetos {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+body.dark #filtro-projetos {
+  background-color: #1f2937;
+  color: #f3f4f6;
+  border-color: #4b5563;
+}
+
+.tag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #e2e8f0;
+  color: #1e40af;
+  border-radius: 6px;
+}
+
+body.dark .tag {
+  background-color: #374151;
+  color: #93c5fd;
+}
+
+#preview-container {
+  margin-top: 40px;
+  display: none;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+}
+
+#preview-header {
+  background-color: #1e40af;
+  color: white;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#preview-header div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#preview-header button {
+  background: transparent;
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+   padding: 0 6px;
+}
+
+#preview-header button:hover {
+  opacity: 0.8;
+}   
+
+#preview-frame {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+body.dark #preview-header {
+  background-color: #374151;
+}
+
+#filtros-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filtro-categoria {
+  padding: 8px 14px;
+  font-size: 14px;
+  background-color: #e2e8f0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.filtro-categoria:hover {
+  background-color: #cbd5e1;
+}
+
+.filtro-categoria.ativo {
+  background-color: #2563eb;
+  color: white;
+}
+
+body.dark .filtro-categoria {
+  background-color: #374151;
+  color: #f3f4f6;
+}
+
+body.dark .filtro-categoria:hover {
+  background-color: #4b5563;
+}
+
+body.dark .filtro-categoria.ativo {
+  background-color: #1e40af;
+}
+
+/* Botão de visualização */
+#toggle-visualizacao {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Modo grid */
+.projetos.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.projetos.grid a {
+  font-size: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
